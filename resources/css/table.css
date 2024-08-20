@@ -1,7 +1,8 @@
 
 table{
-    width: var(--wrapContainerTable);
+    width: 100%;
     margin: 0 auto;
+    padding: 3px 3px 7px 3px;
 }
 thead{
     background-color: var(--color-headtable);

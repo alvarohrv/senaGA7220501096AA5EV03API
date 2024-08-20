@@ -74,5 +74,9 @@ a{
 	outline: none;
 	padding: 5px; 
 }
+#idmessage{
+	color:red;
+	font-size: var(--textMd);
+}
 
 

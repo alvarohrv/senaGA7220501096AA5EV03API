@@ -19,8 +19,11 @@
     <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/table.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/infofactura.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/cardtec.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/widgettable.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/queries.css">
     <link rel="stylesheet" type="text/css" href="./style_media_minw800.css">
+    
     <style type="text/css"> </style>
   </head>
   <body class=" contBody">   <!-- contCentrado -->
@@ -48,7 +51,7 @@
           <div class="itemmenu">
             <div class="icon home-icon"> </div>
             <div class="contname_item">
-              <a href="./board.html">
+              <a href="/board.html">
                 <p class="name_item"> Home</p>
               </a>
             </div>
@@ -92,12 +95,131 @@
       <main class="contMain contMain2"> <!-- MAIN  CLASS: direction_column_center-->
         <div class="continfofactura_main">
           <div class="toggle-btn-menuburger"><span>&#9776</span></div>
+          <!-- El código &#9776; es una entidad HTML que representa el carácter Unicode U+2630, el cual es comúnmente utilizado como un icono de menú (hamburguesa). -->
           <div class="fichainventario">
-            INVENTARIO PRINCIPAL
+            BOARD
           </div>
         </div>
         <div class="contable_main" >
-          <table border="1">
+          <div class="header_contable" >
+            <div class="cardtec">
+              <div class="centradoflex contsvg">
+                <div class="tag-icon marcasvg"></div>
+              </div>
+              <div class="centradoflex continf">
+                <div class="ColumCentradoflex">
+                  <span class="textLg">5</span>
+                  <span>Marcas</span>
+                </div>
+              </div>
+            </div>
+            <div class="cardtec">
+              <div class="centradoflex contsvg">
+                <div class="tag-icon listsvg"></div>
+              </div>
+              <div class="centradoflex continf">
+                <div class="ColumCentradoflex">
+                  <span class="textLg">10</span>
+                  <span>Categorias</span>
+                </div>
+              </div>
+            </div>
+            <div class="cardtec">
+              <div class="centradoflex contsvg">
+                <div class="tag-icon cartsvg"></div>
+              </div>
+              <div class="centradoflex continf">
+                <div class="ColumCentradoflex">
+                  <span class="textLg">10</span>
+                  <span>Productos</span>
+                </div>
+              </div>
+            </div>
+            <div class="cardtec">
+              <div class="centradoflex contsvg">
+                <div class="tag-icon dollarsvg"></div>
+              </div>
+              <div class="centradoflex continf">
+                <div class="ColumCentradoflex">
+                  <span class="textLg">15</span>
+                  <span>Ventas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="body_contable" >
+            <div class="widgettable">
+              <div class="header_widgettable">
+                <span>&#128240</span>
+                <p> Productos mas vendidos</p>
+              </div>
+              <div class="body_widgettable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>id</th>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>IngresoBruto</th>
+                      <th>Beneficiobruto</th>
+                      <th>MargenBruto</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>5</td>
+                      <td>Champu - Pantene Pro-V Repara & Protege</td>
+                      <td>4</td>
+                      <td>1300000</td>
+                      <td>180000</td>
+                      <td>13.85%</td>
+                    </tr>
+                    <tr>
+                      <td>56</td>
+                      <td>Jabon - Palmolive variado</td>
+                      <td>5</td>
+                      <td>1800000</td>
+                      <td>500000</td>
+                      <td>27.78%</td>
+                    </tr>
+                    <tr>
+                      <td>72</td>
+                      <td>Crema - Nivea Men</td>
+                      <td>1</td>
+                      <td>110000</td>
+                      <td>55000</td>
+                      <td>50.00%</td>
+                    </tr>
+                    <tr>
+                      <td>56</td>
+                      <td>Desodorante - Dove Invisible Dry Women</td>
+                      <td>1</td>
+                      <td>160000</td>
+                      <td>60000</td>
+                      <td>37.50%</td>
+                    </tr>
+                    <tr>
+                      <td>56</td>
+                      <td>Desodorante - Dove Invisible Dry Women</td>
+                      <td>1</td>
+                      <td>160000</td>
+                      <td>60000</td>
+                      <td>37.50%</td>
+                    </tr>
+                    <tr>
+                      <td>82</td>
+                      <td>Talco - Mafresh normal, con triclosan</td>
+                      <td>1</td>
+                      <td>192000</td>
+                      <td>82000</td>
+                      <td>42.71%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>        
+          <!-- <table border="1">
             <thead>
                 <tr>
                   <th>cod.</th>
@@ -202,7 +324,7 @@
                 <td>_____</td> 
               </tr>
             </tbody>
-        </table>
+        </table> -->
         </div>
       </main>
     </div>

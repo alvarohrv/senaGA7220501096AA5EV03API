@@ -1,6 +1,3 @@
-
-
-
 /*
 	--h-nav-bar: 5.0rem;
 	--h-cont-user: 10.0rem;
@@ -8,6 +5,8 @@
 */
 
 /* ASIDE */
+exit-icon
+
 .contnamesoft_aside{
     height: var(--h-nav-bar);
     width: 100%;
@@ -19,11 +18,12 @@
 }
 .contmenu_aside{
     width: 100%;
+    margin: 4px;
 }
 .png_user{
     background-image: url('../img/profile-user.png');
     background-repeat: no-repeat;
-    background-posittion: center;
+    background-position: center;
     background-size: contain;
     object-fit: contain; 
     width: var(--h-cont-imguser) ;
@@ -32,6 +32,7 @@
     cursor: pointer;
 }
 .minimenu_user{}
+
 .rol_minimenu{
     color: var(--color-white);
     text-align: center;
@@ -68,15 +69,17 @@
 .config-icon{
     background-image: url('../img/config.png');
     background-repeat: no-repeat;
-    background-posittion: center;
+    background-position: center;
     background-size: contain;
     width: var(--h-item-menu);
     height: var(--h-item-menu);
+
+    opacity: 0.2; 
 }
 .exit-icon{
     background-image: url('../img/exit.png');
     background-repeat: no-repeat;
-    background-posittion: center;
+    background-position: center;
     background-size: contain;
     width: var(--h-item-menu);
     height: var(--h-item-menu);
@@ -84,7 +87,7 @@
 .inventory-icon{
     background-image: url('../img/inventory3.png');
     background-repeat: no-repeat;
-    background-posittion: center;
+    background-position: center;
     background-size: contain;
     width: var(--h-item-menu);
     height: var(--h-item-menu);
@@ -92,10 +95,33 @@
 .home-icon{
     background-image: url('../img/home.png');
     background-repeat: no-repeat;
-    background-posittion: center;
+    background-position: center;
     background-size: contain;
     width: var(--h-item-menu);
     height: var(--h-item-menu);
 }
+
+
+.contAside.active{
+    display: none;
+}
+
+.contmenu_aside .itemmenu:nth-last-child(-n +3) p{
+    color: grey;
+}
+
+@media  screen and (max-width: 670px){
+
+    .contAside{
+        position: absolute;
+        width: 100vw;
+        display: none;
+    }
+
+    .contAside.active{
+        display: block;
+    }
+}
+
 
 

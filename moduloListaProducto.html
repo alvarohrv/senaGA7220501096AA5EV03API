@@ -15,10 +15,12 @@
     <!-- Fuente -->
     <link rel="stylesheet" type="text/css" href="./resources/css/mynormalize_ar.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/toggle-btn-menuburger.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/toggle-btn-create.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/aside.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/table.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/infofactura.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/modal-form.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/queries.css">
     <link rel="stylesheet" type="text/css" href="./style_media_minw800.css">
     <style type="text/css"> </style>
@@ -93,6 +95,7 @@
         <div class="continfofactura_main">
           <div class="toggle-btn-menuburger"><span>&#9776</span></div>
           <div class="fichainventario">
+            <div class="toggle-btn-create"><span>&#9546</span></div>
             INVENTARIO PRINCIPAL
           </div>
         </div>
@@ -100,106 +103,22 @@
           <table border="1">
             <thead>
                 <tr>
-                  <th>cod.</th>
+                  <th>Nombre</th>
                   <th>Marca</th>
-                  <th>complemento</th>
-                  <th>Cantidad</th>
-                  <th>Presentación</th>
-                  <th>PVP</th>
+                  <th>Categoria</th>
+                  <th>Presentacion</th>
                   <th>Estado</th>
-                  <th>_____</th>                  
+                  <th>Delete</th>                  
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="product-table-body">
               <tr>
-                <td>65</td>
-                <td>Champu - Pantene</td>
-                <td>Pro-V Repara & Protege</td>
-                <td>5</td>
-                <td>Caja 6 unidades de litro</td>
-                <td>325.000</td>               
-                <td>En exitencia</td> 
-                <td>_____</td>  
-              </tr>
-              <tr>
-                <td>78</td>
-                <td>Jabon - Protex</td>
-                <td>variado</td>
-                <td>8</td>
-                <td>Empaque 6 unidades de 160gr</td>
-                <td>220.000</td>               
-                <td>En exitencia</td> 
-                <td>_____</td>  
-              </tr>
-              <tr>
-                <td>56</td>
-                <td>Jabon - Palmolive</td>
-                <td>variado</td>
-                <td>10</td>
-                <td>Empaque 6 unidades de 140gr</td>
-                <td>360.000</td>               
-                <td>En exitencia</td> 
-                <td>_____</td> 
-              </tr>
-              <tr>
-                <td>72</td>
-                <td>Crema - Nivea</td>
-                <td>Men</td>
-                <td>3</td>
-                <td>Caja con 4 unidades de 240ml</td>
-                <td>110.000</td>               
-                <td>En exitencia</td> 
-                <td>_____</td> 
-              </tr>
-              <tr>
-                <td>56</td>
-                <td>Desodorante - Dove</td>
-                <td>Invisible Dry Women</td>
-                <td>5</td>
-                <td>Caja con 4 unidades de 150ml</td>
-                <td>160.000</td>               
-                <td>En exitencia</td> 
-                <td>_____</td> 
-              </tr>
-              <tr>
-                <td>82</td>
-                <td>Talxo - Mafresh</td>
-                <td>normal, con triclosan</td>
-                <td>3</td>
-                <td>Caja con 8 unidades de 150gr</td>
-                <td>192.000</td>               
-                <td>Agotado</td> 
-                <td>_____</td> 
-              </tr>
-              <tr>
-                <td>82</td>
-                <td>Talxo - Mafresh</td>
-                <td>normal, con triclosan</td>
-                <td>3</td>
-                <td>Caja con 8 unidades de 150gr</td>
-                <td>192.000</td>               
-                <td>Agotado</td> 
-                <td>_____</td> 
-              </tr>
-              <tr>
-                <td>82</td>
-                <td>Talxo - Mafresh</td>
-                <td>normal, con triclosan</td>
-                <td>3</td>
-                <td>Caja con 8 unidades de 150gr</td>
-                <td>192.000</td>               
-                <td>Agotado</td> 
-                <td>_____</td> 
-              </tr>
-              <tr>
-                <td>82</td>
-                <td>Talxo - Mafresh</td>
-                <td>normal, con triclosan</td>
-                <td>3</td>
-                <td>Caja con 8 unidades de 150gr</td>
-                <td>192.000</td>               
-                <td>Agotado</td> 
-                <td>_____</td> 
+                <td>CARGANDO</td>
+                <td>CARGANDO</td>
+                <td>CARGANDO</td>
+                <td>CARGANDO</td>
+                <td>CARGANDO</td>               
+                <td><a href="#" onclick="deleteProduct(32)">Delete</a></td>  
               </tr>
             </tbody>
         </table>
@@ -207,7 +126,51 @@
       </main>
     </div>
     <footer class="hidden contFooter"></footer>
+
+    
+
+    <div id="idModalForm">
+      <div class="contForm">
+        <h2>Crear Un Producto</h2>
+        <form id="create-product-form">
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="brand">Marca:</label>
+            <input type="text" id="brand" name="brand" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="category">Categoría:</label>
+            <input type="text" id="category" name="category" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="presentation">Presentación:</label>
+            <input type="text" id="presentation" name="presentation" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="status">Estado:</label>
+            <input type="text" id="status" name="status" required>
+          </div>
+    
+          <div class="modal-buttons">
+            <button type="button" id="close-modal-button">Cerrar</button>
+            <button type="submit" id="send-button">Crear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
     <script src="script.js"></script>
     <script src="resources/js/toggle-btn-menuburger.js"></script>
+    <script src="resources/js/get_all_product.js"></script>
+    <script src="resources/js/logica_delete.js"></script>
+    <script src="resources/js/create_product.js"></script>
   </body>
 </html>
